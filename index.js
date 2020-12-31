@@ -93,8 +93,8 @@ searchtxt.addEventListener("input",function(){
 	let noteCards = document.getElementsByClassName('noteCard');
 
 	for (var i = 0; i < noteCards.length; i++) {
-		let cardtxt = noteCards[i].getElementsByTagName("p")[0].innerText;
-		let cardtxt1 = noteCards[i].getElementsByTagName("h5")[0].innerText;
+		let cardtxt = noteCards[i].getElementsByTagName("p")[0].innerText.toLowerCase();
+		let cardtxt1 = noteCards[i].getElementsByTagName("h5")[0].innerText.toLowerCase();
 		if(cardtxt.includes(inputVal) || cardtxt1.includes(inputVal)){
 			noteCards[i].style.display = "block";
 		}
